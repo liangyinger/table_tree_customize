@@ -1,4 +1,4 @@
-# vue-table-with-tree-grid
+# table_tree_customize
 
 > A table (with tree-grid) component for Vue.js 2.0. (Its style extends [@iView](https://github.com/iview/iview))
 
