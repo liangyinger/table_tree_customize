@@ -317,4 +317,10 @@
   };
 </script>
 
-<style lang="less" src="./Table.less"></style>
+<style>
+ @import './Table.css';
+ @import "./font/iconfont.css"; 
+</style>
+<!-- <style lang="less" src='./Table.less'>
+  
+</style> -->

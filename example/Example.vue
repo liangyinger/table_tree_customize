@@ -1,17 +1,17 @@
 <template lang="html">
   <div id="example">
-    <!-- <ul class="switch-list">
+    <ul class="switch-list">
       <li class="switch-item" v-for="item in propList">
         <span>{{ item.name }}: </span>
         <zk-switch v-model="props[item.name]"></zk-switch>
       </li>
-    </ul> -->
+    </ul>
     <zk-table
       ref="table"
       sum-text="sum"
       index-text="#"
-      :data="data1"
-      :columns="columns1"
+      :data="data"
+      :columns="columns"
       :stripe="props.stripe"
       :border="props.border"
       :show-header="props.showHeader"
@@ -23,14 +23,14 @@
       :expand-type="props.expandType"
       :selection-type="props.selectionType"
       @checkbox-click="handleRadioClick">
-     <!--  <template slot="$expand" scope="scope">
+      <template slot="$expand" scope="scope">
         {{ `My name is ${scope.row.name},
            this rowIndex is ${scope.rowIndex}.`
          }}
       </template>
       <template slot="likes" scope="scope">
         {{ scope.row.likes.join(',') }}
-      </template> -->
+      </template>
       <!-- <template slot="lastyear" scope="scope">
         {{`${scope.row.i}`}}
          <Input   v-model="value"  style="width: 100px" />
@@ -38,7 +38,8 @@
       </template> -->
       <!-- <zkinput> -->
          <template slot="lastyear" scope="scope">
-            <zkinput></zkinput>
+            <!-- <zkinput></zkinput> -->
+            <Input v-model="scope.row.lastyear"  style="width: 200px"   @on-change="changeInputText(value)"/>
          </template>
      <!-- </zkinput> -->
     </zk-table>
@@ -62,7 +63,7 @@
     },
     data() {
       return {
-        value:'wwww',
+        // value:'wwww',
         collect:[],
         props: {
           stripe: false,
@@ -237,6 +238,13 @@
             type: 'template',
             template: 'likes',
           },
+          {
+            label: '去年',
+            prop: 'lastyear',
+            minWidth: '100px',
+            type: 'template',
+            template: 'lastyear',
+          },
         ],
         columns1: [
           {
@@ -274,8 +282,7 @@
             name: "爷爷",
             age: 18,
             sex: "男",
-            // i:'999'
-            // lastyear:'sdjsd'
+            lastyear:'sdjsd'
           },
           {
             id: 11,
@@ -379,15 +386,19 @@
       handleRadioClick(option) {
         // console.log(this.$refs['table'].getCheckedProp())
         this.collect = this.$refs['table'].getCheckedProp()
+      },
+      changeInputText(e){
+        debugger
+         console.log(e)
       }
     },
     mounted(){
-      this.value = '999'
+      
     }
   };
 </script>
 
-<style scoped lang="less">
+<style scoped>
   * {
     margin: 0;
     padding: 0;

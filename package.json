@@ -28,6 +28,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "iview": "^3.4.1",
     "vue": "^2.4.3"
   },
   "devDependencies": {
