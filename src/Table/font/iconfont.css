@@ -7,7 +7,7 @@
   url('iconfont.svg?t=1505310522875#iconfont') format('svg'); /* iOS 4.1- */
 }
 
-.zk-icon {
+.ly-icon {
   font-family: "iconfont" !important;
   font-size: 14px;
   font-style: normal;
@@ -15,8 +15,8 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.zk-icon-plus-square-o:before { content: "\e631"; }
+.ly-icon-plus-square-o:before { content: "\e631"; }
 
-.zk-icon-minus-square-o:before { content: "\e632"; }
+.ly-icon-minus-square-o:before { content: "\e632"; }
 
-.zk-icon-angle-right:before { content: "\e633"; }
+.ly-icon-angle-right:before { content: "\e633"; }

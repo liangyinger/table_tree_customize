@@ -1,9 +1,9 @@
 import Checkbox from '../Checkbox/Checkbox'; // eslint-disable-line
-import { mixins } from './utils';
+import  mixins  from './utils/mixins.js';
 
 /* eslint-disable no-underscore-dangle */
 export default {
-  name: 'zk-table__body',
+  name: 'ly-table__body',
   mixins: [mixins],
   data() {
     return {
@@ -175,7 +175,7 @@ export default {
       // ExpandType
       // debugger
       if (this.isExpandCell(this.table, columnIndex)) {
-        return <i class='zk-icon zk-icon-angle-right'></i>;
+        return <i class='ly-icon ly-icon-angle-right'></i>;
       }
       // SelectionType's Checkbox
       if (this.isSelectionCell(this.table, columnIndex)) {
@@ -220,7 +220,7 @@ export default {
           }}>
             { row._childrenLen > 0 &&
               <i
-                class={ `${this.prefixCls}--tree-icon zk-icon zk-icon-${row._isFold ? 'plus' : 'minus'}-square-o`}
+                class={ `${this.prefixCls}--tree-icon ly-icon ly-icon-${row._isFold ? 'plus' : 'minus'}-square-o`}
                 on-click={ $event => this.handleEvent($event, 'icon', { row, rowIndex, column, columnIndex }, { isFold: row._isFold }) }></i>
             }
             { row[column.prop]&&row[column.template] ? temp :row[column.prop] ? row[column.prop] : ''}

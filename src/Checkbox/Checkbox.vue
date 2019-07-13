@@ -10,7 +10,7 @@
 
 <script>
   export default {
-    name: 'zk-checkbox',
+    name: 'ly-checkbox',
     props: {
       value: {
         type: Boolean,
@@ -27,7 +27,7 @@
     },
     data() {
       return {
-        prefixCls: 'zk-checkbox',
+        prefixCls: 'ly-checkbox',
       };
     },
     computed: {

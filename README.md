@@ -72,7 +72,7 @@ Vue.component(LyTable.name, LyTable)
 | minWidth | 列最小宽度 | [String, Number] | '80px' |
 | type | 列类型，可选值有 'template'(自定义列模板) | String | '' |
 | template | 列类型为 'template'(自定义列模板) 时，对应的[作用域插槽](https://cn.vuejs.org/v2/guide/components.html#作用域插槽)（它可以获取到 row, rowIndex, column, columnIndex）名称 | String | '' |
-| readerHeader | 头部列名自定义模版对应的插槽（不需要定义列类型为） | String | '' |
+| renderHeader | 头部列名自定义模版对应的插槽（不需要定义列类型为） | String | '' |
 
 ### Table Events
 

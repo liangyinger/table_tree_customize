@@ -4,7 +4,7 @@ import mixins from './utils/mixins';
 
 /* eslint-disable no-underscore-dangle */
 export default {
-  name: 'zk-table__header',
+  name: 'ly-table__header',
   mixins: [mixins],
   data() {
     return {

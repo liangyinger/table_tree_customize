@@ -3,10 +3,10 @@
     <ul class="switch-list">
       <li class="switch-item" v-for="item in propList">
         <span>{{ item.name }}: </span>
-        <zk-switch v-model="props[item.name]"></zk-switch>
+        <ly-switch v-model="props[item.name]"></ly-switch>
       </li>
     </ul>
-    <zk-table
+    <ly-table
       ref="table"
       sum-text="sum"
       index-text="#"
@@ -47,7 +47,7 @@
              <textAreaMade  v-show="scope.row.state === 9"></textAreaMade>
              <tableUpload2  v-show="scope.row.state === 3"></tableUpload2>
           </template> -->
-    </zk-table>
+    </ly-table>
    <!-- <div>
       <p>{{this.value}}</p>
       <Input v-model="value"  style="width: 200px" />
@@ -57,14 +57,14 @@
 </template>
 
 <script>
-  import ZkSwitch from './Switch/Switch';
-  import zkinput from  './Switch/input.vue'
+  import LySwitch from './Switch/Switch';
+  import Lyinput from  './Switch/input.vue'
   import {getTree} from './treedata';
 
   export default {
     name: 'example',
     components: {
-      ZkSwitch,zkinput
+      LySwitch,Lyinput
     },
     data() {
       return {

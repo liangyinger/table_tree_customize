@@ -38,7 +38,8 @@
   import TableHeader from './TableHeader';
   import TableBody from './TableBody';
   import TableFooter from './TableFooter';
-  import { mixins, scrollBarWidth as getSbw } from './utils';
+  import  mixins  from './utils/mixins.js';
+  import  getSbw from './utils/scrollBarWidth.js';
 
   /* eslint-disable no-underscore-dangle */
   /* eslint-disable no-param-reassign */
@@ -138,7 +139,7 @@
   }
 
   export default {
-    name: 'zk-table',
+    name: 'ly-table',
     mixins: [mixins],
     components: {
       TableHeader,

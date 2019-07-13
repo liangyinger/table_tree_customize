@@ -1,8 +1,8 @@
-import { mixins } from './utils';
+import mixins  from './utils/mixins.js';
 
 /* eslint-disable no-underscore-dangle */
 export default {
-  name: 'zk-table__footer',
+  name: 'ly-table__footer',
   mixins: [mixins],
   data() {
     return {

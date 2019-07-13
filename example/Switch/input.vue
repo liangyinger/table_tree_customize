@@ -6,7 +6,7 @@
 </template>
 <script>
 	export default{
-		name: 'zk-input',
+		name: 'ly-input',
 		data(){
 			return{
 				value:'sss'

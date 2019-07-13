@@ -1,7 +1,7 @@
-import ZkTable from './Table/Table';
+import LyTable from './Table/Table';
 
-ZkTable.install = (Vue) => {
-  Vue.component(ZkTable.name, ZkTable);
+LyTable.install = (Vue) => {
+  Vue.component(LyTable.name, LyTable);
 };
 
-export default ZkTable;
+export default LyTable;

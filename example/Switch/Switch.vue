@@ -9,7 +9,7 @@
 
 <script>
   export default {
-    name: 'zk-switch',
+    name: 'ly-switch',
     props: {
       value: {
         type: Boolean,
@@ -22,7 +22,7 @@
     },
     data() {
       return {
-        prefixCls: 'zk-switch',
+        prefixCls: 'ly-switch',
       };
     },
     computed: {
