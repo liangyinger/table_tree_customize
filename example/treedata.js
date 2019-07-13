@@ -5,7 +5,7 @@ export function getTree(data, rootCode,columns) {
     let len = data.length;
     if (isNotBlank(rootCode)) {
         for (let j = 0; j < len; j++) {
-            // data[j].title = data[j].title;
+            data[j].title = data[j].title;
             if (data[j].id == rootCode) {
                 treedata.push({
                     'id': data[j].id,

@@ -1,5 +1,6 @@
 import Checkbox from '../Checkbox/Checkbox'; // eslint-disable-line
-import { mixins } from './utils';
+import mixins from './utils/mixins';
+
 
 /* eslint-disable no-underscore-dangle */
 export default {
@@ -49,6 +50,7 @@ export default {
 
     // 根据type渲染单元格Label
     function renderLabel(column, columnIndex) {
+      // debugger
       if (this.isSelectionCell(this.table, columnIndex)) {
         const allCheck = this.table.bodyData.every(row => row._isChecked);
         const indeterminate = !allCheck && this.table.bodyData.some(row => row._isChecked);
@@ -58,8 +60,15 @@ export default {
           onOn-change={ checked => this.toggleAllChecked(checked) }
           ></Checkbox>;
       }
-      return column.label ? column.label : '';
-    }
+      // return column.label ? column.label : ''
+      if(column.renderHeader){
+          return this.table.$scopedSlots[column.renderHeader]({column, columnIndex})
+        }else if(column.label){
+          return column.label
+        }else{
+          return ''
+        }
+      }
 
     // Template
     return (

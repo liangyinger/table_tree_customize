@@ -211,6 +211,7 @@ export default {
       }
       // Tree's firstProp
       if (this.table.treeType && this.table.firstProp === column.prop) {
+        let temp = this.table.$scopedSlots[column.template] ? this.table.$scopedSlots[column.template]({ row, rowIndex, column, columnIndex }) : '';
         return <span
           class={ `${this.prefixCls}--level-${row._level}-cell` }
           style={{
@@ -222,7 +223,7 @@ export default {
                 class={ `${this.prefixCls}--tree-icon zk-icon zk-icon-${row._isFold ? 'plus' : 'minus'}-square-o`}
                 on-click={ $event => this.handleEvent($event, 'icon', { row, rowIndex, column, columnIndex }, { isFold: row._isFold }) }></i>
             }
-            { row[column.prop] ? row[column.prop] : '' }
+            { row[column.prop]&&row[column.template] ? temp :row[column.prop] ? row[column.prop] : ''}
         </span>;
       }
       // TreeType children's index
@@ -236,6 +237,7 @@ export default {
         ? this.table.$scopedSlots[column.template]({ row, rowIndex, column, columnIndex })
         : '';
       }
+      // debugger
       return '';
     }
 
