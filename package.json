@@ -10,11 +10,11 @@
     "vue-jsx"
   ],
   "author": "",
-  "homepage": "https://github.com/liangyinga/table_tree_customize",
-  "bugs": "https://github.com/liangyinga/table_tree_customize/issues",
+  "homepage": "https://github.com/liangyinger/table_tree_customize",
+  "bugs": "https://github.com/liangyinger/table_tree_customize/issues",
   "repository": {
     "type": "git",
-    "url": "https://github.com/liangyinga/table_tree_customize"
+    "url": "https://github.com/liangyinger/table_tree_customize"
   },
   "main": "lib/table_tree_customize.js",
   "files": [
